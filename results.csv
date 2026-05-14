@@ -1,0 +1,31 @@
+id,hypothesis_category,text,expected_label,rationale,predicted_label,predicted_probability,correct
+1,negation,The latest update did not improve battery life at all.,negative,Tests whether the model picks up the negation cue or just the trigger word 'improve',negative,0.7898488640785217,True
+2,lexical_trigger,This app is no longer reliable on my phone.,negative,Strong positive cue 'reliable' negated by 'no longer'; tests cue-vs-context handling,negative,0.9545062780380249,True
+3,domain_shift,The team won the championship final last weekend.,neutral,Sports content unrelated to app-review training; tests domain-shift robustness,neutral,0.4741218686103821,True
+4,negation,The new feature doesn’t work the way they promised.,negative,This sentence checks if the model ignores the negation and focuses only on 'work'.,negative,0.8377081155776978,True
+5,negation,I never really enjoyed using this platform.,negative,This tests whether the model correctly handles negation before a positive sentiment cue.,neutral,0.4935743510723114,False
+6,lexical_trigger,"The app used to be reliable, but now it crashes almost every day.",negative,This example contains a strong positive trigger word inside an overall negative review.,neutral,0.5066937804222107,False
+7,lexical_trigger,"The interface looks amazing, but the performance is awful.",negative,This tests whether the model overreacts to the positive cue word 'amazing'.,neutral,0.5618600249290466,False
+8,lexical_trigger,"It had a great concept, but the bugs completely ruined it.",negative,This checks whether the model focuses too much on the positive opening phrase.,neutral,0.598590075969696,False
+9,lexical_trigger,Excellent customer support… if they ever decide to reply.,negative,This example flips the meaning after a positive phrase to test contextual understanding.,positive,0.9225662350654602,False
+10,lexical_trigger,Everything sounds perfect until you actually try using it.,negative,This tests whether the model gets tricked by the positive cue word 'perfect'.,positive,0.7550919651985168,False
+11,domain_shift,The striker scored two goals near the end of the match.,neutral,This sports-related sentence tests whether the model incorrectly assigns sentiment outside app reviews.,positive,0.49161767959594727,False
+12,domain_shift,"The recipe calls for olive oil, garlic, and fresh basil.",neutral,This cooking-domain sentence checks whether neutral instructions are misclassified.,positive,0.5879657864570618,False
+13,domain_shift,Heavy rain caused several flight delays this morning.,neutral,This news-style sentence tests generalization to a different domain.,neutral,0.5095730423927307,True
+14,domain_shift,Researchers reported a small rise in ocean temperatures this year.,neutral,This scientific statement checks whether factual reporting is mistaken for sentiment.,neutral,0.5738129615783691,True
+15,domain_shift,The coach announced the starting lineup before practice.,neutral,This sports-domain example evaluates whether the classifier treats neutral reporting as emotional.,neutral,0.4854784905910492,True
+16,length_extreme,Absolutely terrible.,negative,This very short example tests sentiment prediction with minimal context.,negative,0.9674370288848877,True
+17,length_extreme,Pretty solid overall.,positive,This short sentence checks whether the model handles compact positive feedback.,positive,0.8744414448738098,True
+18,length_extreme,Worst update yet.,negative,This tiny example tests confidence on extremely short negative text.,negative,0.9664690494537354,True
+19,length_extreme,"After using the app almost every day for months on multiple devices and internet connections, I still deal with random crashes, delayed notifications, login problems, and lag that makes the whole experience frustrating.",negative,This long sentence tests whether the model keeps track of sentiment across many details.,neutral,0.4974830448627472,False
+20,length_extreme,"Even though the interface first looked modern and smooth and the setup process seemed simple, the app slowly became harder to use because of constant ads, broken tools, confusing menus, and inconsistent updates.",negative,This example checks whether the model preserves the overall negative meaning in a long sentence.,neutral,0.5991002321243286,False
+21,sarcasm,"Amazing, another update that somehow breaks everything again.",negative,This sarcastic sentence uses a positive opening with a clearly negative intention.,positive,0.9057407975196838,False
+22,sarcasm,"Yeah, because an app crashing every few minutes is exactly what users want.",negative,This tests whether the model understands sarcastic phrasing.,neutral,0.7112135291099548,False
+23,sarcasm,I just love waiting forever for the app to finally open.,negative,This checks whether the model mistakes sarcasm for genuine praise.,positive,0.8096847534179688,False
+24,sarcasm,Wonderful job deleting my files without any warning.,negative,This example tests whether the model overweights the positive phrase 'Wonderful job'.,positive,0.893454909324646,False
+25,sarcasm,"Perfect, now the app freezes even faster than before.",negative,This sarcastic example combines praise language with a negative outcome.,positive,0.8434501886367798,False
+26,other,"The app is fine overall, nothing especially good or bad.",neutral,This example targets weak and balanced sentiment that may confuse the classifier.,positive,0.5804135799407959,False
+27,other,It behaves differently depending on which device I use.,neutral,This sentence tests whether neutral technical observations are mistaken for sentiment.,neutral,0.685761570930481,True
+28,negation,The latest update really didn’t make the battery any better.,negative,This tests whether the model notices the negation around a positive improvement phrase.,negative,0.8613702058792114,True
+29,negation,I honestly can’t recommend this app anymore.,negative,This checks whether the model catches negation tied to the positive word 'recommend'.,negative,0.8568565249443054,True
+30,negation,The app wasn’t actually that bad after the recent fix.,positive,This example tests whether the model understands negation of a negative phrase.,neutral,0.6678902506828308,False
